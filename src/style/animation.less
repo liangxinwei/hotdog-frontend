@@ -1,0 +1,50 @@
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes spacebox-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.spacebox-scale-in {
+  -webkit-perspective: 1000;
+  backface-visibility: hidden;
+  animation: bounceInDown 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.spacebox-fade-in {
+  -webkit-perspective: 1000;
+  backface-visibility: hidden;
+  animation: spacebox-fade-in 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
