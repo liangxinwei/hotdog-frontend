@@ -37,6 +37,25 @@ export function getUrlSearchParameter() {
   });
   return searchObj;
 }
+
+/**
+ * 获取 hash 中的参数
+ */
+export function getURLHashParameter() {
+  window.location.hash = window.location.hash.replace('#//', '#/');
+  const hash = window.location.hash || '';
+  const hashArray = hash.split('?');
+  const hashSearchParamStr = hashArray[1];
+  let hashObj = {};
+  hashSearchParamStr && hashSearchParamStr.split('&').forEach(v => {
+    const list = v.split('=');
+    if (list.length === 2) {
+      hashObj[list[0]] = list[1];
+    }
+  });
+  return hashObj;
+}
+
 /**
  * 生成模拟的 uuid
  */

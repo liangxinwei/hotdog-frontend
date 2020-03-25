@@ -24,7 +24,8 @@
 </template>
 
 <script>
-  import {Url, Util} from '@/utils';
+  import {getURLHashParameter} from '@/utils';
+  import Url from '@/utils/url';
   import {WeChat, closeWindow} from '@/utils/wechat';
 
   export default {
@@ -38,7 +39,7 @@
     watch: {},
     async created() {
       // https://m-test.spacebox.fun/#/wx-login?token=9dc1a787-a087-4d3e-adf1-ebda637b6c8d
-      const param = Util.getURLHashParameter();
+      const param = getURLHashParameter();
       this.token = param.token;
     },
     mounted() {
