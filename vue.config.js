@@ -36,22 +36,6 @@ module.exports = {
     config.plugins.delete('preload'); // TODO: need test
     config.plugins.delete('prefetch'); // TODO: need test
 
-    config.module
-      .rule('svg')
-      .exclude.add(resolve('src/icons'))
-      .end();
-
-    // set preserveWhitespace
-    config.module
-      .rule('vue')
-      .use('vue-loader')
-      .loader('vue-loader')
-      .tap(options => {
-        options.compilerOptions.preserveWhitespace = true;
-        return options;
-      })
-      .end();
-
     config.devtool(process.env.NODE_ENV === 'development' ? 'eval-source-map' : false);
 
     config
