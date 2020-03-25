@@ -17,13 +17,13 @@
     },
     methods: {
       goHome() {
-        this.$router.push('/data/summary');
+        this.$router.push('/');
       }
     }
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
   .page-404-container {
     width: 100vw;
     height: 100vh;
