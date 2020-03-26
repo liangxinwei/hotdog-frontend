@@ -14,6 +14,10 @@
       };
     },
     watch: {},
+    async mounted() {
+      const res = await this.$http.get('/list');
+      console.log(res);
+    },
     methods: {}
   };
 </script>

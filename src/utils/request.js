@@ -2,7 +2,6 @@ import axios from 'axios';
 import Url from '@/utils/url';
 
 const service = axios.create({
-  baseURL: Url.API_BASE_URL,
   withCredentials: true,
   timeout: 15000
 });
