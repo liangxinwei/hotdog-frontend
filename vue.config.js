@@ -24,10 +24,8 @@ module.exports = {
       errors: true
     },
     proxy: {
-      // change xxx-api/login => mock/login
-      // detail: https://cli.vuejs.org/config/#devserver-proxy
-      '/': {
-        target: 'http://111.229.70.117:5000',
+      '/v1': {
+        target: 'http://localhost:5000',
         changeOrigin: true
       }
     },

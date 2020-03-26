@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    hello
+    <h1 style="text-align: center; margin: 20px 0;">
+      hello
+    </h1>
+    <div style="padding: 15px;">
+      <div>测试数据：</div>
+      <div>{{ testData }}</div>
+    </div>
   </div>
 </template>
 
@@ -9,14 +15,14 @@
     name: 'Home',
     data() {
       return {
-        telephone: '',
-        password: ''
+        testData: ''
       };
     },
     watch: {},
     async mounted() {
-      const res = await this.$http.get('/list');
+      const res = await this.$http.get('/v1/list');
       console.log(res);
+      this.testData = JSON.stringify(res);
     },
     methods: {}
   };
@@ -25,9 +31,5 @@
 <style scoped lang="less">
   .container {
     color: var(--text-color-normal);
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    font-size: 30px;
   }
 </style>

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Url from '@/utils/url';
 
 const service = axios.create({
   withCredentials: true,
@@ -25,7 +24,7 @@ service.interceptors.request.use((config) => {
 // 回应拦截
 service.interceptors.response.use((response) => {
   const res = response.data;
-  if (res.status === 200 || res.status === true) {
+  if (res.code === 200 || res.code === true) {
     return Promise.resolve(res.data || res);
   }
   return Promise.reject(res);
