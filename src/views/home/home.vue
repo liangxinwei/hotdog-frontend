@@ -3,6 +3,9 @@
     <h1 style="text-align: center; margin: 20px 0;">
       hello
     </h1>
+    <h2 style="text-align: center; margin: 20px 0;">
+      test webhooks
+    </h2>
     <div style="padding: 15px;">
       <div>测试数据：</div>
       <div>{{ testData }}</div>
