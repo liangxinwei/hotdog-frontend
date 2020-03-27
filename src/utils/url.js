@@ -1,9 +1,8 @@
 // 地址
-let url = 'http://apiv1.cijian.link/';
-// const url = 'https://yapi.spacebox.fun/mock/15';
+let url = 'https://hotdog.liangxinwei.cn/';
 
 if (location.hostname === 'localhost') {
-  // url = 'http://dev.cijian.link/';
+  url = 'http://localhost:5000/';
 }
 
 export default {
