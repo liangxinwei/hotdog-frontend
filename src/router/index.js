@@ -16,15 +16,57 @@ const dynamicImport = (path) => async (resolve) => {
  *    title:                页面标题
  *    checkUnionId:         如果需要一进入页面就发请求并携带参数 unionid，则接入 checkUnionId
  *
- * 注意：以下的 component 为 dynamicImport 类型的，dynamicImport 的参数都有 ../pages/ 前缀，
+ * 注意：以下的 component 为 dynamicImport 类型的，dynamicImport 的参数都有 ../views/ 前缀，
  */
 const routerList = [
   {
     path: '/',
+    redirect: '/home/index',
+  },
+  {
+    path: '/home',
     component: dynamicImport('home/home'),
     meta: {
-      // needUnionId: true
     },
+    children: [
+      {
+        path: 'index',
+        // component: dynamicImport('order/order'),
+        meta: {
+          title: '首页'
+        }
+      },
+    ]
+  },
+  {
+    path: '/order',
+    component: dynamicImport('order/order'),
+    meta: {
+    },
+    children: [
+      {
+        path: 'index',
+        // component: dynamicImport('order/order'),
+        meta: {
+          title: '订单'
+        }
+      },
+    ]
+  },
+  {
+    path: '/my',
+    component: dynamicImport('my/my'),
+    meta: {
+    },
+    children: [
+      {
+        path: 'index',
+        // component: dynamicImport('my/my'),
+        meta: {
+          title: '我的'
+        }
+      },
+    ]
   },
   // 微信扫码登录PMS
   {
@@ -76,8 +118,8 @@ router.afterEach(route => {
 });
 
 export function resetRouter() {
-  const newRouter = createRouter();
-  router.matcher = newRouter.matcher; // reset router
+  // const newRouter = createRouter();
+  // router.matcher = newRouter.matcher; // reset router
 }
 
 export default router;

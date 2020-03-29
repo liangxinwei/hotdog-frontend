@@ -1,15 +1,15 @@
 <template>
-  <div class="container">
-    <h1 style="text-align: center; margin: 20px 0;">
-      hello
-    </h1>
-    <h2 style="text-align: center; margin: 20px 0;">
-      test webhooks
-    </h2>
-    <div style="padding: 15px;">
-      <div>测试数据：</div>
-      <div>{{ testData }}</div>
-    </div>
+  <div class="has-box-tab container">
+    <van-list
+      v-model="loading"
+      :finished="requestFinished"
+      finished-text="没有更多了"
+    >
+      <van-cell v-for="(item) in users" :key="item.uid" :title="item.name">
+        <span>{{ item.gender === 1 ? '男' : '女' }} {{ item.age }}岁</span>
+      </van-cell>
+    </van-list>
+    <box-tab tab="home" />
   </div>
 </template>
 
@@ -18,14 +18,16 @@
     name: 'Home',
     data() {
       return {
-        testData: ''
+        requestFinished: true,
+        loading: true,
+        users: ''
       };
     },
     watch: {},
     async mounted() {
       const res = await this.$http.get('/v1/list');
-      console.log(res);
-      this.testData = JSON.stringify(res);
+      this.loading = false;
+      this.users = res;
     },
     methods: {}
   };

@@ -1,12 +1,14 @@
 'use strict';
 const path = require('path');
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const pxtoviewport = require('postcss-px-to-viewport');
 
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
 
-const name = 'hotdog';                                      // page title
+const name = 'hotdog';                                              // page title
 const port = process.env.npm_package_config_port;                   // dev port
 
 module.exports = {
@@ -29,6 +31,18 @@ module.exports = {
         changeOrigin: true
       }
     },
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          autoprefixer(),
+          pxtoviewport({
+            viewportWidth: 375
+          })
+        ]
+      }
+    }
   },
   configureWebpack: {
     name: name,

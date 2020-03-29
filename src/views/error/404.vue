@@ -2,9 +2,9 @@
   <div class="box-flex-column-start page-404-container">
     <h1>页面不存在</h1>
     <p>SORRY!网页不见了...</p>
-    <el-button type="primary" @click="goHome">
+    <van-button type="primary" @click="goHome">
       回到首页
-    </el-button>
+    </van-button>
   </div>
 </template>
 
