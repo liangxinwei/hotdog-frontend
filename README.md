@@ -1,5 +1,8 @@
 # hotgod frontend
 
+## 组件库：
+[Vant](https://youzan.github.io/vant/#/zh-CN/button)
+
 ## 编辑器支持 webstorm
 - alias
 > preferences -> Language -> Javascript -> Webpack node_modules/@vue/cli-service/webpack.config.js
