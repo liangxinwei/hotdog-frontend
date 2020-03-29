@@ -1,5 +1,8 @@
 # hotgod frontend
 
+## 后端项目
+[hotdog-backend](https://github.com/liangxinwei/hotdog-backend)
+
 ## 组件库：
 [Vant](https://youzan.github.io/vant/#/zh-CN/button)
 

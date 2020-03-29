@@ -25,12 +25,6 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    proxy: {
-      '/v1': {
-        target: 'http://localhost:5000',
-        changeOrigin: true
-      }
-    },
   },
   css: {
     loaderOptions: {
