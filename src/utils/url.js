@@ -1,5 +1,4 @@
-// 地址
-let url = 'https://hotdog.liangxinwei.cn/';
+let url = 'https://hotdog.liangxinwei.cn/backend/';
 
 if (location.hostname === 'localhost') {
   url = 'http://localhost:5000/';

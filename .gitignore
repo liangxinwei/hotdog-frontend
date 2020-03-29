@@ -19,3 +19,4 @@ selenium-debug.log
 *.local
 
 package-lock.json
+/build/deploy.sh
