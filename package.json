@@ -7,6 +7,8 @@
     "build": "ENVFILE=.env.production node env/setupEnv.js react-app-rewired build",
     "build:staging": "ENVFILE=.env.staging.local node env/setupEnv.js react-app-rewired build",
     "build:preview": "ENVFILE=.env.staging node env/setupEnv.js react-app-rewired build",
+    "build:docs": "node docs/generate-docs.js",
+    "version:update": "./scripts/version.sh",
     "test": "JEST_TEST=1 CI=true react-app-rewired test",
     "test:watch": "react-app-rewired test",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
