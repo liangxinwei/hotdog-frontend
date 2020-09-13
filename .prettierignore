@@ -1,0 +1,6 @@
+**/*.svg
+**/*.ejs
+**/*.html
+package.json
+.public
+node_modules
