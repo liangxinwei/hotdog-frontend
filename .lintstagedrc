@@ -1,9 +1,0 @@
-{
-  "(src|docs|test)/**/*.{json,md}": [
-    "prettier --write"
-  ],
-  "(src|docs|test)/**/*.{js, mjs}": [
-    "eslint --fix",
-    "prettier --write"
-  ]
-}

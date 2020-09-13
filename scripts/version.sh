@@ -11,5 +11,3 @@ else
   echo "ERROR: 请在 develop 或 hotfix-* 分支上执行本脚本"
   exit 1
 fi
-
-

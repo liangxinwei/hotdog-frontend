@@ -16,7 +16,7 @@
     "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx --color --quiet --fix ./src ./env ./docs",
     "lint:stylelint": "stylelint '**/*.tsx' --allow-empty-input --fix",
     "lint:tsc": "tsc --noEmit",
-    "precommit": "lint-staged --config lint-staged.config.js"
+    "precommit": "lint-staged --config .lintstagedrc.js"
   },
   "dependencies": {
     "@rematch/core": "^1.4.0",
@@ -86,6 +86,12 @@
     "stylelint-config-styled-components": "0.1.1",
     "typescript": "~3.7.2",
     "webpack-bundle-analyzer": "^3.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build:docs && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "browserslist": {
     "production": [
