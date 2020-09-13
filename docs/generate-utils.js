@@ -11,7 +11,7 @@ const docDir = __dirname
 
 const getInputFiles = () => {
   const root = path.resolve(docDir, '..')
-  const patterns = ['src/**/*.js']
+  const patterns = ['src/**/*.ts']
   return patterns.reduce((res, p) => [...res, ...glob.sync(path.resolve(root, p))], [])
 }
 
