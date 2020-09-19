@@ -1,0 +1,34 @@
+[
+  {
+    "name": "InternetExplorer",
+    "value": "99999"
+  },
+  {
+    "name": "Safari",
+    "value": "12"
+  },
+  {
+    "name": "Chrome",
+    "value": "50"
+  },
+  {
+    "name": "Firefox",
+    "value": "43"
+  },
+  {
+    "name": "MicrosoftEdge",
+    "value": "18"
+  },
+  {
+    "name": "Android",
+    "value": "5"
+  },
+  {
+    "name": "UC",
+    "value": "11"
+  },
+  {
+    "name": "WeChat",
+    "value": "6.5.2"
+  }
+]

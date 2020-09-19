@@ -1,0 +1,397 @@
+[
+  {
+    "name": "XiaoMi6 WeChat 6.5",
+    "value": "Mozilla/5.0 (Linux; Android 7.1.1; MI 6 Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.49 Mobile MQQBrowser/6.2 TBS/043508 Safari/537.36 MicroMessenger/6.5.13.1100 NetType/WIFI Language/zh_CN",
+    "device": "phone",
+    "os": {
+      "name": "Android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "WeChat",
+      "version": "6.5.13.1100"
+    },
+    "isWeChat": true,
+    "isAndroid": true,
+    "isMobile": true
+  },
+  {
+    "name": "XiaoMi6 Chrome 53",
+    "value": "Mozilla/5.0 (Linux; U; Android 7.1.1; zh-cn; MI 6 Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.146 Mobile Safari/537.36 XiaoMi/MiuiBrowser/9.2.1",
+    "device": "phone",
+    "os": {
+      "name": "Android",
+      "version": "7.1.1"
+    },
+    "browser": {
+      "name": "Chrome",
+      "version": "53.0.2785.146"
+    },
+    "isAndroid": true,
+    "isMobile": true
+  },
+  {
+    "name": "Desktop Safari 12",
+    "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Safari/605.1.15",
+    "device": "desktop",
+    "os": {
+      "name": "macOS",
+      "version": "10.14.5"
+    },
+    "browser": {
+      "name": "Safari",
+      "version": "12.1.1"
+    },
+    "isSafari": true
+  },
+  {
+    "name": "Desktop Safari 11",
+    "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+    "device": "desktop",
+    "os": {
+      "name": "macOS",
+      "version": "10.13.3"
+    },
+    "browser": {
+      "name": "Safari",
+      "version": "11.0.3"
+    },
+    "isSafari": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "Desktop Safari 10",
+    "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8",
+    "device": "desktop",
+    "os": {
+      "name": "macOS",
+      "version": "10.12.6"
+    },
+    "browser": {
+      "name": "Safari",
+      "version": "10.1.2"
+    },
+    "isSafari": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "Desktop Chrome 64",
+    "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36",
+    "device": "desktop",
+    "os": {
+      "name": "macOS",
+      "version": "10.13.3"
+    },
+    "browser": {
+      "name": "Chrome",
+      "version": "64.0.3282.186"
+    }
+  },
+  {
+    "name": "iPhone iOS 10.3.3 Safari",
+    "value": "Mozilla/5.0 (iPhone 84; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.0 MQQBrowser/7.8.0 Mobile/14G60 Safari/8536.25 MttCustomUA/2 QBWebViewType/1 WKType/1",
+    "device": "phone",
+    "os": {
+      "name": "iOS",
+      "version": "10.3.3"
+    },
+    "browser": {
+      "name": "Safari",
+      "version": "10.0"
+    },
+    "isIOS": true,
+    "isSafari": true,
+    "isMobile": true
+  },
+  {
+    "name": "iPad iOS 8.0.2 Safari",
+    "value": "Mozilla/5.0 (iPad; CPU OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A405 Safari/600.1.4",
+    "device": "tablet",
+    "os": {
+      "name": "iOS",
+      "version": "8.0.2"
+    },
+    "browser": {
+      "name": "Safari",
+      "version": "8.0"
+    },
+    "isIncompatible": true,
+    "isIOS": true,
+    "isSafari": true,
+    "isTablet": true
+  },
+  {
+    "name": "Samsung Galaxy Note 8 Android 4.2.2 Chrome 35",
+    "value": "Mozilla/5.0 (Linux; Android 4.2.2; GT-N5100 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Safari/537.36",
+    "device": "tablet",
+    "os": {
+      "name": "Android",
+      "version": "4.2.2"
+    },
+    "browser": {
+      "name": "Chrome",
+      "version": "35.0.1916.141"
+    },
+    "isIncompatible": true,
+    "isAndroid": true,
+    "isTablet": true
+  },
+  {
+    "name": "DingTalk 3.2 Android 6 ",
+    "value": "Mozilla/5.0 (Linux; Android 6.0.1; MI MAX Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.81 Mobile Safari/537.36 AliApp(DingTalk/3.2.0) com.alibaba.android.rimet/0 Channel/10002068 language/zh-CN",
+    "device": "phone",
+    "os": {
+      "name": "Android",
+      "version": "6.0.1"
+    },
+    "browser": {
+      "name": "DingTalk",
+      "version": "3.2.0"
+    },
+    "isAndroid": true,
+    "isDingTalk": true,
+    "isMobile": true
+  },
+  {
+    "name": "Edge 14",
+    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393",
+    "device": "desktop",
+    "os": {
+      "name": "Windows",
+      "version": "nt 10.0"
+    },
+    "browser": {
+      "name": "MicrosoftEdge",
+      "version": "14.14393"
+    },
+    "isIncompatible": true
+  },
+  {
+    "name": "Edge 16",
+    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299",
+    "device": "desktop",
+    "os": {
+      "name": "Windows",
+      "version": "nt 10.0"
+    },
+    "browser": {
+      "name": "MicrosoftEdge",
+      "version": "16.16299"
+    },
+    "isIncompatible": true
+  },
+  {
+    "name": "Edge 18",
+    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763",
+    "device": "desktop",
+    "os": {
+      "name": "Windows",
+      "version": "nt 10.0"
+    },
+    "browser": {
+      "name": "MicrosoftEdge",
+      "version": "18.17763"
+    }
+  },
+  {
+    "name": "Nexus Chrome 47",
+    "value": "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 9 Build/LMY48T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Safari/537.36",
+    "browser": {
+      "name": "Chrome",
+      "version": "47.0.2526.83"
+    },
+    "os": {
+      "name": "Android",
+      "version": "5.1.1"
+    },
+    "device": "tablet",
+    "isTablet": true,
+    "isAndroid": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "IE 11",
+    "value": "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko",
+    "device": "tablet",
+    "browser": {
+      "name": "InternetExplorer",
+      "version": "11.0"
+    },
+    "os": {
+      "name": "Windows",
+      "version": "nt 6.3"
+    },
+    "isTablet": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "IE 10",
+    "value": "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; ARM; Touch; WPDesktop)",
+    "device": "tablet",
+    "browser": {
+      "name": "InternetExplorer",
+      "version": "10.0"
+    },
+    "os": {
+      "name": "Windows",
+      "version": "nt 6.2"
+    },
+    "isTablet": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "Firefox 26",
+    "value": "Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0",
+    "device": "phone",
+    "browser": {
+      "name": "Firefox",
+      "version": "26.0"
+    },
+    "os": {
+      "name": "other",
+      "version": "0"
+    },
+    "isMobile": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "Firefox 54",
+    "value": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0",
+    "device": "desktop",
+    "browser": {
+      "name": "Firefox",
+      "version": "54.0"
+    },
+    "os": {
+      "name": "Windows",
+      "version": "nt 10.0"
+    }
+  },
+  {
+    "name": "iOS 7.0.2 WeChat 6.1",
+    "value": "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) CriOS/30.0.1599.12 Mobile/11A501 Safari/8536.25 MicroMessenger/6.1.0",
+    "device": "phone",
+    "browser": {
+      "name": "WeChat",
+      "version": "6.1.0"
+    },
+    "os": {
+      "name": "iOS",
+      "version": "7.0.2"
+    },
+    "isIOS": true,
+    "isMobile": true,
+    "isWeChat": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "iOS 11.2.2 WeChat 6.6.1",
+    "value": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_2 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C202 MicroMessenger/6.6.1 NetType/WIFI Language/en",
+    "device": "phone",
+    "browser": {
+      "name": "WeChat",
+      "version": "6.6.1"
+    },
+    "os": {
+      "name": "iOS",
+      "version": "11.2.2"
+    },
+    "isMobile": true,
+    "isWeChat": true,
+    "isIOS": true
+  },
+  {
+    "name": "Android WeChat 6.3",
+    "value": "Mozilla/5.0 (Linux; Android 4.4.2; Che2-TL00M Build/HonorChe2-TL00M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.49 Mobile MQQBrowser/6.2 TBS/043128 Safari/537.36 MicroMessenger/6.3.31.940 NetType/WIFI Language/zh_CN",
+    "device": "phone",
+    "browser": {
+      "name": "WeChat",
+      "version": "6.3.31.940"
+    },
+    "os": {
+      "name": "Android",
+      "version": "4.4.2"
+    },
+    "isMobile": true,
+    "isWeChat": true,
+    "isIncompatible": true,
+    "isAndroid": true
+  },
+  {
+    "name": "Android Browser 4",
+    "value": "Mozilla/5.0 (Linux; U; Android 4.0.4; pt-br; MZ608 Build/7.7.1-141-7-FLEM-UMTS-LA) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+    "device": "tablet",
+    "browser": {
+      "name": "Android",
+      "version": "4.0"
+    },
+    "os": {
+      "name": "Android",
+      "version": "4.0.4"
+    },
+    "isTablet": true,
+    "isAndroid": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "Android Browser 9",
+    "value": "Mozilla/5.0 (Linux; Android 6.0.1; SM-N9100 Build/LRX22C ) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13D15 Safari/601.1",
+    "device": "phone",
+    "browser": {
+      "name": "Android",
+      "version": "9.0"
+    },
+    "os": {
+      "name": "Android",
+      "version": "6.0.1"
+    },
+    "isMobile": true,
+    "isAndroid": true
+  },
+  {
+    "name": "IOS UC 10",
+    "value": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X; en-US) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/13E238 UCBrowser/10.7.0.782 Mobile",
+    "device": "phone",
+    "browser": {
+      "name": "UC",
+      "version": "10.7.0.782"
+    },
+    "os": {
+      "name": "iOS",
+      "version": "9.3.1"
+    },
+    "isMobile": true,
+    "isIOS": true
+  },
+  {
+    "name": "Android UC 9",
+    "value": "Mozilla/5.0 (Linux; U; Android 4.4.2; id; SM-G900 Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/9.9.2.467 U3/0.8.0 Mobile Safari/534.30",
+    "device": "phone",
+    "browser": {
+      "name": "UC",
+      "version": "9.9.2.467"
+    },
+    "os": {
+      "name": "Android",
+      "version": "4.4.2"
+    },
+    "isMobile": true,
+    "isAndroid": true,
+    "isIncompatible": true
+  },
+  {
+    "name": "UC 11",
+    "value": "Mozilla/5.0 (Linux; U; Android 6.0.1; zh-CN; F5121 Build/34.0.A.1.247) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.5.1.944 Mobile Safari/537.36",
+    "device": "phone",
+    "browser": {
+      "name": "UC",
+      "version": "11.5.1.944"
+    },
+    "os": {
+      "name": "Android",
+      "version": "6.0.1"
+    },
+    "isMobile": true,
+    "isAndroid": true
+  }
+]

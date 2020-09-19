@@ -1,84 +1,137 @@
 {
-  "name": "hotdog-frontend",
-  "version": "1.0.0",
-  "description": "个人测试项目",
-  "author": "liangxinwei <liangxinwei@spacebox.fun>",
-  "license": "MIT",
+  "name": "ts-react-demo",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "preview": "node build/index.js --preview",
-    "lint": "eslint --fix --ext .js,.vue src",
-    "test:unit": "jest --clearCache && vue-cli-service test:unit",
-    "test:ci": "npm run lint && npm run test:unit",
-    "deploy": "npm run build && expect build/deploy.sh",
-    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml"
+    "start": "node env/setupEnv.js react-app-rewired start",
+    "build": "ENVFILE=.env.production node env/setupEnv.js react-app-rewired build",
+    "build:staging": "ENVFILE=.env.staging.local node env/setupEnv.js react-app-rewired build",
+    "build:preview": "ENVFILE=.env.staging node env/setupEnv.js react-app-rewired build",
+    "build:docs": "node docs/generate-docs.js",
+    "version:update": "./scripts/version.sh",
+    "test": "JEST_TEST=1 CI=true react-app-rewired test",
+    "test:watch": "react-app-rewired test",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "lint": "yarn lint:eslint && yarn lint:stylelint && yarn lint:tsc",
+    "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx --color --quiet --fix ./src ./env ./docs",
+    "lint:stylelint": "stylelint '**/*.tsx' --allow-empty-input --fix",
+    "lint:tsc": "tsc --noEmit",
+    "precommit": "lint-staged --config .lintstagedrc.js"
+  },
+  "dependencies": {
+    "@rematch/core": "^1.4.0",
+    "@rematch/loading": "^1.2.1",
+    "@rematch/select": "^2.0.5",
+    "axios": "^0.20.0",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.20",
+    "query-string": "^6.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-intl": "^5.8.2",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux-persist": "^6.0.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/runtime": "^7.5.5",
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/lodash": "^4.14.161",
+    "@types/node": "^14.10.1",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-intl": "3.0.0",
+    "@types/react-redux": "^7.1.1",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "cross-spawn": "^7.0.3",
+    "customize-cra": "^1.0.0",
+    "dotenv": "^8.2.0",
+    "dotenv-expand": "^5.1.0",
+    "eslint": "6.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "2.2.0",
+    "extract-comments": "^1.1.0",
+    "glob": "^7.1.6",
+    "husky": "^4.3.0",
+    "json2md": "^1.7.1",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
+    "react-app-rewired": "^2.1.6",
+    "react-scripts": "^3.4.3",
+    "shelljs": "^0.8.4",
+    "source-map-explorer": "^2.5.0",
+    "stylelint": "13.6.1",
+    "stylelint-config-prettier": "8.0.2",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-recommended": "3.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "typescript": "~3.7.2",
+    "webpack-bundle-analyzer": "^3.8.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn build:docs && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "lint-staged": {
-    "src/**/*.{js,vue}": [
-      "npm run lint",
-      "git add"
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "last 2 versions",
+      "not dead",
+      "and_chr >= 45",
+      "not and_chr < 45",
+      "chrome >= 57",
+      "not chrome < 45",
+      "and_ff >= 43",
+      "not and_ff < 43",
+      "firefox >= 52",
+      "not firefox < 43",
+      "edge >= 16",
+      "not edge < 16",
+      "ios_saf >= 10",
+      "not ios_saf < 10",
+      "safari >= 12",
+      "not safari < 12",
+      "android >= 5",
+      "not android < 5",
+      "and_uc >= 11",
+      "not and_uc < 11",
+      "not ie > 0",
+      "not ie_mob > 0",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   },
-  "config": {
-    "port": 7000
-  },
-  "keywords": [
-    "hotdog",
-    "Vue"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/liangxinwei/hotdog-frontend.git"
-  },
-  "dependencies": {
-    "autoprefixer": "^9.7.5",
-    "axios": "0.19.0",
-    "clipboard": "2.0.4",
-    "dayjs": "^1.8.16",
-    "lodash.clonedeep": "^4.5.0",
-    "vant": "^2.5.8",
-    "vue": "2.6.10",
-    "vue-router": "3.0.2",
-    "vuex": "3.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "7.0.0",
-    "@babel/register": "7.0.0",
-    "@vue/cli-plugin-babel": "3.5.3",
-    "@vue/cli-plugin-eslint": "^3.9.1",
-    "@vue/cli-plugin-unit-jest": "3.5.3",
-    "@vue/cli-service": "3.5.3",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "autoprefixer": "^9.5.1",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "10.0.1",
-    "babel-jest": "23.6.0",
-    "chalk": "2.4.2",
-    "connect": "3.6.6",
-    "eslint": "5.15.3",
-    "eslint-plugin-vue": "5.2.2",
-    "html-webpack-plugin": "3.2.0",
-    "husky": "1.3.1",
-    "less": "^3.9.0",
-    "less-loader": "^4.1.0",
-    "lint-staged": "8.1.5",
-    "runjs": "^4.3.2",
-    "postcss-px-to-viewport": "^1.1.0",
-    "script-ext-html-webpack-plugin": "2.1.3",
-    "vue-template-compiler": "2.6.10"
-  },
-  "engines": {
-    "node": ">=8.9",
-    "npm": ">= 3.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  "jest": {
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/src/$1",
+      "^react$": "<rootDir>/node_modules/react/",
+      "^axios$": "<rootDir>/node_modules/axios/"
+    }
+  }
 }
