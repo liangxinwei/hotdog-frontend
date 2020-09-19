@@ -1,4 +1,4 @@
-const types = ['add', 'update', 'remove', 'fix', 'docs']
+const types = ['feat', 'update', 'remove', 'fix', 'docs']
 
 module.exports = {
   rules: {

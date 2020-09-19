@@ -1321,12 +1321,24 @@
   resolved "http://npm.seiue.com:4873/@formatjs%2fecma402-abstract/-/ecma402-abstract-1.2.1.tgz#ad966998d7f0e96fca4bdc5de0ca28d02f371279"
   integrity sha1-rZZpmNfw6W/KS9xd4Moo0C83Enk=
 
+"@formatjs/ecma402-abstract@^1.2.2":
+  version "1.2.2"
+  resolved "http://npm.seiue.com:4873/@formatjs%2fecma402-abstract/-/ecma402-abstract-1.2.2.tgz#4810bdbd696d3805c535fd0620b7c8f45ab3164f"
+  integrity sha1-SBC9vWltOAXFNf0GILfI9FqzFk8=
+
 "@formatjs/intl-displaynames@^3.3.7":
   version "3.3.7"
   resolved "http://npm.seiue.com:4873/@formatjs%2fintl-displaynames/-/intl-displaynames-3.3.7.tgz#7d8cc73d0a67a7c51b182233121eaa2c85f9f751"
   integrity sha1-fYzHPQpnp8UbGCIzEh6qLIX591E=
   dependencies:
     "@formatjs/ecma402-abstract" "^1.2.1"
+
+"@formatjs/intl-displaynames@^3.3.8":
+  version "3.3.8"
+  resolved "http://npm.seiue.com:4873/@formatjs%2fintl-displaynames/-/intl-displaynames-3.3.8.tgz#37a3698e135e00908c4314c1085a90d4b9381f61"
+  integrity sha1-N6NpjhNeAJCMQxTBCFqQ1Lk4H2E=
+  dependencies:
+    "@formatjs/ecma402-abstract" "^1.2.2"
 
 "@formatjs/intl-listformat@^4.2.6":
   version "4.2.6"
@@ -1335,12 +1347,26 @@
   dependencies:
     "@formatjs/ecma402-abstract" "^1.2.1"
 
+"@formatjs/intl-listformat@^4.2.7":
+  version "4.2.7"
+  resolved "http://npm.seiue.com:4873/@formatjs%2fintl-listformat/-/intl-listformat-4.2.7.tgz#bcccfee92c69e661d4da51567540aa39fef9ceae"
+  integrity sha1-vMz+6Sxp5mHU2lFWdUCqOf75zq4=
+  dependencies:
+    "@formatjs/ecma402-abstract" "^1.2.2"
+
 "@formatjs/intl-relativetimeformat@^7.2.6":
   version "7.2.6"
   resolved "http://npm.seiue.com:4873/@formatjs%2fintl-relativetimeformat/-/intl-relativetimeformat-7.2.6.tgz#7452e0feaa433f341b306e308166058e8126e934"
   integrity sha1-dFLg/qpDPzQbMG4wgWYFjoEm6TQ=
   dependencies:
     "@formatjs/ecma402-abstract" "^1.2.1"
+
+"@formatjs/intl-relativetimeformat@^7.2.7":
+  version "7.2.7"
+  resolved "http://npm.seiue.com:4873/@formatjs%2fintl-relativetimeformat/-/intl-relativetimeformat-7.2.7.tgz#dce72ebafb1ca0bf14673fab3b1aad145e1abac6"
+  integrity sha1-3OcuuvscoL8UZz+rOxqtFF4ausY=
+  dependencies:
+    "@formatjs/ecma402-abstract" "^1.2.2"
 
 "@formatjs/intl@^1.3.1":
   version "1.3.1"
@@ -1354,6 +1380,19 @@
     fast-memoize "^2.5.2"
     intl-messageformat "^9.3.7"
     intl-messageformat-parser "^6.0.6"
+
+"@formatjs/intl@^1.3.2":
+  version "1.3.2"
+  resolved "http://npm.seiue.com:4873/@formatjs%2fintl/-/intl-1.3.2.tgz#95240177ef9a66614ae28193d346c1d65036cefd"
+  integrity sha1-lSQBd++aZmFK4oGT00bB1lA2zv0=
+  dependencies:
+    "@formatjs/ecma402-abstract" "^1.2.2"
+    "@formatjs/intl-displaynames" "^3.3.8"
+    "@formatjs/intl-listformat" "^4.2.7"
+    "@formatjs/intl-relativetimeformat" "^7.2.7"
+    fast-memoize "^2.5.2"
+    intl-messageformat "^9.3.8"
+    intl-messageformat-parser "^6.0.7"
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -1611,13 +1650,6 @@
   resolved "http://npm.seiue.com:4873/@rematch%2floading/-/loading-1.2.1.tgz#90e939c61b21663ae0270cd3046871358e598de0"
   integrity sha1-kOk5xhshZjrgJwzTBGhxNY5ZjeA=
 
-"@rematch/persist@^1.1.6":
-  version "1.1.6"
-  resolved "http://npm.seiue.com:4873/@rematch%2fpersist/-/persist-1.1.6.tgz#6eba5e11cd6cac92d745a43f842866620c7a0880"
-  integrity sha1-brpeEc1srJLXRaQ/hChmYgx6CIA=
-  dependencies:
-    redux-persist "^5.10.0"
-
 "@rematch/select@^2.0.5":
   version "2.0.5"
   resolved "http://npm.seiue.com:4873/@rematch%2fselect/-/select-2.0.5.tgz#dba1f64c2d8a53a5fa17996b7c094ffc252f0d2e"
@@ -1859,6 +1891,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/history@*":
+  version "4.7.8"
+  resolved "http://npm.seiue.com:4873/@types%2fhistory/-/history-4.7.8.tgz#49348387983075705fe8f4e02fb67f7daaec4934"
+  integrity sha1-STSDh5gwdXBf6PTgL7Z/farsSTQ=
+
 "@types/hoist-non-react-statics@*", "@types/hoist-non-react-statics@^3.3.0", "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
   resolved "http://npm.seiue.com:4873/@types%2fhoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -1981,6 +2018,23 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
     redux "^4.0.0"
+
+"@types/react-router-dom@^5.1.5":
+  version "5.1.5"
+  resolved "http://npm.seiue.com:4873/@types%2freact-router-dom/-/react-router-dom-5.1.5.tgz#7c334a2ea785dbad2b2dcdd83d2cf3d9973da090"
+  integrity sha1-fDNKLqeF260rLc3YPSzz2Zc9oJA=
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    "@types/react-router" "*"
+
+"@types/react-router@*":
+  version "5.1.8"
+  resolved "http://npm.seiue.com:4873/@types%2freact-router/-/react-router-5.1.8.tgz#4614e5ba7559657438e17766bb95ef6ed6acc3fa"
+  integrity sha1-RhTlunVZZXQ44Xdmu5Xvbtasw/o=
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
 
 "@types/react@*", "@types/react@^16.9.0":
   version "16.9.49"
@@ -6575,6 +6629,13 @@ intl-messageformat-parser@^6.0.6:
   dependencies:
     "@formatjs/ecma402-abstract" "^1.2.1"
 
+intl-messageformat-parser@^6.0.7:
+  version "6.0.7"
+  resolved "http://npm.seiue.com:4873/intl-messageformat-parser/-/intl-messageformat-parser-6.0.7.tgz#de57a03466e1441b7cbfd99a02ace108745ef133"
+  integrity sha1-3legNGbhRBt8v9maAqzhCHRe8TM=
+  dependencies:
+    "@formatjs/ecma402-abstract" "^1.2.2"
+
 intl-messageformat@^9.3.7:
   version "9.3.7"
   resolved "http://npm.seiue.com:4873/intl-messageformat/-/intl-messageformat-9.3.7.tgz#d40e61dc20ded8952fef00d97237880ff380550a"
@@ -6582,6 +6643,14 @@ intl-messageformat@^9.3.7:
   dependencies:
     fast-memoize "^2.5.2"
     intl-messageformat-parser "^6.0.6"
+
+intl-messageformat@^9.3.8:
+  version "9.3.8"
+  resolved "http://npm.seiue.com:4873/intl-messageformat/-/intl-messageformat-9.3.8.tgz#561f31800cc3ced5dada6c991a0dd0233931850f"
+  integrity sha1-Vh8xgAzDztXa2myZGg3QIzkxhQ8=
+  dependencies:
+    fast-memoize "^2.5.2"
+    intl-messageformat-parser "^6.0.7"
 
 invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
@@ -10349,7 +10418,7 @@ react-error-overlay@^6.0.7:
   resolved "http://npm.seiue.com:4873/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha1-Hc+0WatnHVP2YKmRUTyy8KBVMQg=
 
-react-intl@*, react-intl@^5.8.1:
+react-intl@*:
   version "5.8.1"
   resolved "http://npm.seiue.com:4873/react-intl/-/react-intl-5.8.1.tgz#2974499d438bcde58437100b0c19043ca0ffcc3b"
   integrity sha1-KXRJnUOLzeWENxALDBkEPKD/zDs=
@@ -10364,6 +10433,23 @@ react-intl@*, react-intl@^5.8.1:
     hoist-non-react-statics "^3.3.2"
     intl-messageformat "^9.3.7"
     intl-messageformat-parser "^6.0.6"
+    shallow-equal "^1.2.1"
+
+react-intl@^5.8.2:
+  version "5.8.2"
+  resolved "http://npm.seiue.com:4873/react-intl/-/react-intl-5.8.2.tgz#6be0f31a6438bf12989f7c8f7f4b5610f36e862f"
+  integrity sha1-a+DzGmQ4vxKYn3yPf0tWEPNuhi8=
+  dependencies:
+    "@formatjs/ecma402-abstract" "^1.2.2"
+    "@formatjs/intl" "^1.3.2"
+    "@formatjs/intl-displaynames" "^3.3.8"
+    "@formatjs/intl-listformat" "^4.2.7"
+    "@formatjs/intl-relativetimeformat" "^7.2.7"
+    "@types/hoist-non-react-statics" "^3.3.1"
+    fast-memoize "^2.5.2"
+    hoist-non-react-statics "^3.3.2"
+    intl-messageformat "^9.3.8"
+    intl-messageformat-parser "^6.0.7"
     shallow-equal "^1.2.1"
 
 react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
@@ -10615,11 +10701,6 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
-
-redux-persist@^5.10.0:
-  version "5.10.0"
-  resolved "http://npm.seiue.com:4873/redux-persist/-/redux-persist-5.10.0.tgz#5d8d802c5571e55924efc1c3a9b23575283be62b"
-  integrity sha1-XY2ALFVx5Vkk78HDqbI1dSg75is=
 
 redux-persist@^6.0.0:
   version "6.0.0"

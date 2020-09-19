@@ -1,19 +1,30 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import './themed'
+import { routes, modalRoutes } from '@/routes'
+import { ErrorBoundary } from '@/routes/components/ErrorBoundary'
+import { NestedRoute } from '@/routes/components/NestedRoute'
 
 export const App = () => {
-  return <Container>this is my first ts-react-app</Container>
-}
+  const [sessionCreated, setSessionCreated] = useState(false)
+  useEffect(() => {
+    setSessionCreated(true)
+  }, [])
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  color: indianred;
-  font-weight: bold;
-  font-size: 50px;
-`
+  useEffect(() => {
+    if (sessionCreated) {
+      const loader = document.getElementById('app-loader')
+      if (loader) {
+        loader.remove()
+      }
+    }
+  }, [sessionCreated])
+
+  return (
+    <Router>
+      <ErrorBoundary>
+        <NestedRoute routes={routes} modalRoutes={modalRoutes} />
+      </ErrorBoundary>
+    </Router>
+  )
+}

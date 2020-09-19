@@ -1,8 +1,8 @@
 import { ModelConfig, ModelEffects, Models } from '@rematch/core'
 
-type ExtraRematchLoadingFromEffects<
-  effects extends ModelConfig['effects']
-> = effects extends (...args: any[]) => infer R
+type ExtraRematchLoadingFromEffects<effects extends ModelConfig['effects']> = effects extends (
+  ...args: any[]
+) => infer R
   ? R extends ModelEffects<any>
     ? ExtractRematchLoadingFromEffectsObject<R>
     : {}

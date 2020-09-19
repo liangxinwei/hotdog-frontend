@@ -3,14 +3,21 @@ import ReactDOM from 'react-dom'
 import { Provider as ReduxProvider } from 'react-redux'
 
 import { App } from './App'
+import { initFeatures } from './features'
+import { addRoutes } from './routes'
 import * as serviceWorker from './serviceWorker'
 import { store } from './stores'
+import { GlobalStyle } from './themed/global-style'
 
-console.log(store)
+initFeatures({
+  addLocal: store.dispatch.locale.addMsg,
+  addRoutes,
+})
 
 ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
+      <GlobalStyle />
       <App />
     </ReduxProvider>
   </React.StrictMode>,

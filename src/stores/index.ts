@@ -1,17 +1,19 @@
-import { init, RematchRootState, RematchDispatch } from '@rematch/core'
+import { init, RematchRootState, RematchDispatch, Models as ReduxModels } from '@rematch/core'
 import createLoadingPlugin from '@rematch/loading'
 import createSelectPlugin from '@rematch/select'
 import { useSelector as originUseSelector, useDispatch as originUseDispatch } from 'react-redux'
 
 import { home } from '@/features/home/store'
 import { my } from '@/features/my/store'
+import { localeStore as locale } from '@/locales/store'
 
-import { LoadingState } from './rematch-loading-types'
+import { LoadingState } from './types'
 
 const loading = createLoadingPlugin({})
 const select = createSelectPlugin()
 
-const models = {
+const models: ReduxModels = {
+  locale,
   home,
   my,
 }

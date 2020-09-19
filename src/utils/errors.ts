@@ -1,3 +1,12 @@
+export enum ErrorAction {
+  None = 'none',
+  Toast = 'toast',
+  Alert = 'alert',
+  AlertAndReport = 'alertAndReport',
+  AlertAndLogout = 'loginAndLogout',
+  AlertAndReload = 'alertAndReload',
+}
+
 /**
  * @util
  * 判断一个错误是否是 Axios 抛出的错误，可进一步添加状态码和 Http 动作的判断条件
@@ -33,3 +42,9 @@ export const isAxiosError = (
 export function isChunkLoadError(error: any) {
   return error instanceof Error && error.name === 'ChunkLoadError'
 }
+
+/**
+ * regex 集合，用于过滤 web 上通常由外部代码（比如浏览器插件）引起的错误
+ * 概率较低，由用户上报后添加
+ */
+export const webErrorsToIgnore = [/^MyAppGetLink/, /ucbrowser/]

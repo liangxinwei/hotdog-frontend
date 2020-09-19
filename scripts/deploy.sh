@@ -25,5 +25,5 @@ echo 'Pushing branch to remote ...'
 git push || exit 1
 
 # step 2: upload assets
-scp dist "$remoteIP:$remotePath" || exit 1
+scp -r dist "$remoteIP:$remotePath" || exit 1
 echo -e "\033[32m upload dir dist successfully. \033[0m"
